@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cardboard PS5</title>
+
+    <link rel="stylesheet" href="/assets/css/inter.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/image_catalog.css">
+    <script src="/assets/js/image_catalog.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+
+<div class="title">
+    <h1>
+<a href = "/" style = "text-decoration:none;"><&nbsp;</a>
+    Cardboard PS5</h1>
+</div>
+
+<main>
+<p>I really wanted a PS5 for Christmas 2021. Alas, it didn’t show up until Jan 7th of the next year. No biggie, but my oldest saw fit to make sure I didn’t end up without a PS5 on Christmas day:</p>
+
+<p><img alt="Yes, that&amp;#x27;s cardboard. And it came with it&amp;#x27;s own packaging. And it was amazing." class="img_align_center" data-id="__cardboard_ps5" onclick="toggleViewer('cardboard_ps5')" src="/assets/images/topics/Topic9/inline/cardboard_PS5.jpg" /></p>
+
+<p>One of my most favorite gifts I’ve ever gotten.</p>
+
+<p>But being the dork I am, I thought it’d be cool to mod it to include lights similar to the actual PS5. And to make it more a challenge, I used an <a href="https://www.microchip.com/en-us/product/attiny85">ATtiny85</a>. An 8-bit AVR microcontroller with a whopping 512 bytes of RAM and only 6 I/O pins. Given I was planning to use four RGB LEDs, some additional help was going to be needed.</p>
+
+<p><img alt="deets" class="img_align_left" data-id="__proto" onclick="toggleViewer('proto')" src="/assets/images/topics/Topic9/inline/proto.jpg" />
+Nothing that a little 74* logic can’t resolve. Two <a href="https://www.ti.com/lit/ds/symlink/sn74ls595.pdf">SN74HC595</a>s and we’re golden.</p>
+
+<div style="clear: both;"></div>
+
+<p>Getting everything wired was a bit more challenging. The space in the PS5 was limited and I needed the tiny to live on it’s own board, separate from the button, the USB connection, and the two LED boards. The wiring wasn’t complicated, just a bit to manage to get it all to align properly in the box.</p>
+
+<p>I used two strips of plastic from a milk jug to diffuse the lights, which worked remarkably well.</p>
+
+<div class="imglist-container">
+    <div class="imglist-item"><img alt="deets" data-id="__wired_to_attiny85" onClick="toggleViewer('wired_to_attiny85')" src="/assets/images/topics/Topic9/inline/wired_to_attiny85.jpg"/></div>
+    <div class="imglist-item"><img alt="deets" data-id="__insides" onClick="toggleViewer('insides')" src="/assets/images/topics/Topic9/inline/insides.jpg"/></div>
+</div>
+
+<div style="clear: both;"></div>
+
+<p>See the pulsating goodness in action below. And you can find the code for it <a href="https://github.com/MyztikJenz/arduino/blob/91edce6c67bdc664c57c7fd34cb71494fa52af8b/attiny85/tinyRGBLED_throughShiftRegister/tinyRGBLED_throughShiftRegister.ino">on GitHub</a>.</p>
+
+<p><img alt="movie?" class="img_align_center" data-id="__humming" data-is-video="True" onclick="toggleViewer('humming')" src="/assets/images/topics/Topic9/inline/humming.jpg" /></p>
+
+<div class="openGalleryLink" id="openGalleryLink"><a href="javascript:void(0)" onclick="toggleViewer('led_boards')">More images in the gallery</a></div>
+<div class = "viewerContainer" id = "viewerContainer" style="display:none;"> 
+    <div id = "viewerCloseDiv" class = "viewerCloseDiv">
+        <input type = "image" src = "/assets/images/site/close-button.png" width="48px" height="48px" onclick="toggleViewer();">
+    </div>
+    <div id = "viewerStage" class = "viewerStage">
+        <div id = "viewerImageContainer" class = "viewerImageContainer"></div>
+        <div id = "viewerDescriptionContainer" class = "viewerDescriptionContainer"></div>
+    </div>
+    <div id = "viewerPicker" class = "viewerPicker">
+<img id="__cardboard_ps5" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/cardboard_PS5.jpg"/>
+<img id="__proto" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/proto.jpg"/>
+<img id="__wired_to_attiny85" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/wired_to_attiny85.jpg"/>
+<img id="__insides" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/insides.jpg"/>
+<img data-is-video="True" id="__humming" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/humming.jpg"/>
+<img alt="The LED boards wired up to the 595s, waiting to be wired to the tiny." id="__led_boards" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/led_boards.jpg"/>
+<img alt="Wired up and working! Amazing, I got it right!" id="__led_board_lit" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/led_board_lit.jpg"/>
+<img alt="All done!" id="__finished_mod" onClick="showImage(this)" src="/assets/images/topics/Topic9/inline/finished_mod.jpg"/>
+    </div>
+</div>
+
+
+</main>
+</div>
+</body>
+</html>
